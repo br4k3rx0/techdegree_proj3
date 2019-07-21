@@ -1,0 +1,170 @@
+h1,
+header,
+body {
+    margin: 0;
+    font-family: 'Merriweather', serif;
+}
+
+h1 {
+    background-color: #2D3945;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+h2 {
+    color: #2D3945;
+}
+
+.hdcontainer {
+    text-align: center;
+    margin: 3em 1em;
+}
+
+.hdcontainer p {
+    color: #CBCED1;
+}
+
+fieldset {
+    border: none;
+}
+
+.fieldsetfix {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+label,
+.fieldsetfix p {
+    color: #5f7184;
+    margin-top: 0.5rem;
+    margin-bottom: 0.7rem;
+}
+
+input[type="tel"],
+input[type="email"],
+select,
+textarea,
+input[type="text"]:not(#zipcode) {
+    box-sizing: border-box;
+    background-color: #EFF0F1;
+    border: none;
+    padding: 1em;
+    border-radius: 0.3rem;
+}
+
+#zipcode {
+    box-sizing: border-box;
+    background-color: #EFF0F1;
+    border: none;
+    padding: 1em;
+    border-radius: 0.3rem;
+    align-self: flex-start;
+}
+
+textarea {
+    resize: none;
+}
+
+::-moz-placeholder {
+    text-align: right;
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+}
+::-webkit-input-placeholder {
+    text-align: right;
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+}
+
+legend {
+    padding: 0;
+    margin-bottom: 1rem;
+    color: #2D3945;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+select {
+    color:gray;
+}
+
+body > hr {
+    color: #2D3945;
+    border-top: 0.4rem solid #2D3945;
+    padding-top: 0.3rem;
+    border-bottom: 0.2rem solid #2D3945;
+    border-left: none;
+    border-right: none;
+    margin: 1em;
+}
+
+.cutter {
+    color: #2D3945;
+    border-bottom: 0.2rem solid #2D3945;
+    margin: 1em;
+}
+
+.listinput label::after {
+    content: "";
+    display: block;
+    margin: 1.2em;
+}
+
+button {
+    box-sizing: border-box;
+    background-color: #4EBBB5;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 1rem;
+    color: white;
+    width: 100%;
+    border: none;
+    margin: 1em 0;
+    border-radius: 0.3rem;
+}
+
+footer {
+    color: gray;
+    font-style: italic;
+    text-align: center;
+}
+
+input:focus,
+textarea:focus {
+    color: #46698B;
+}
+
+@media screen and (min-width: 768px) {
+    .hdcontainer,
+    form,
+    hr:not(.cutter) {
+        width: 60%;
+        margin: auto;
+    }
+
+    .fieldsetrow {
+        flex-flow: row wrap;
+        align-items: baseline;
+    }
+    #zipcode {
+        align-self: baseline;
+        flex-basis: auto;
+    }
+    .fieldsetrow legend {
+        flex-basis: 100%;
+    }
+
+    .fieldsetrow input,
+    .fieldsetrow select {
+        flex-basis: 80%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .fieldsetrow label {
+        flex-basis: 20%;
+    }
+}
